@@ -1,2 +1,38 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1 class="my-4">Admin Dashboard</h1>
+
+<p class="lead">Welcome to the admin dashboard! Here are the key store statistics:</p>
+
+<div class="row">
+  <!-- Products Count Card -->
+  <div class="col-md-6 mb-4">
+    <div class="card text-white bg-primary h-100">
+      <div class="card-header">
+        <h5 class="card-title">Products</h5>
+      </div>
+      <div class="card-body">
+        <h2 class="card-text"><%= @product_count %></h2>
+        <p class="card-text">Total number of products in the store.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categories Count Card -->
+  <div class="col-md-6 mb-4">
+    <div class="card text-white bg-success h-100">
+      <div class="card-header">
+        <h5 class="card-title">Categories</h5>
+      </div>
+      <div class="card-body">
+        <h2 class="card-text"><%= @category_count %></h2>
+        <p class="card-text">Total number of categories in the store.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-4">
+  <a href="<%= admin_products_path %>" class="btn btn-lg btn-warning text-dark rounded-pill shadow-lg d-flex align-items-center">
+    <i class="bi bi-cart-fill me-2"></i> <!-- Bootstrap Icons cart icon -->
+    Manage Products
+  </a>
+</div>
